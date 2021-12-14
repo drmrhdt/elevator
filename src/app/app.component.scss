@@ -1,0 +1,57 @@
+$color-btn-pink: pink;
+$color-btn-light-pink: lightpink;
+$color-white: #ffffff;
+$color-shadow-gray: darkgray;
+
+* {
+  box-sizing: border-box;
+}
+
+:host {
+  button {
+    cursor: pointer;
+  }
+
+  .elevator__panel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 250px;
+    height: 600px;
+    padding: 10px;
+
+    background-color: $color-btn-light-pink;
+    border: 1px solid $color-btn-pink;
+    border-radius: 4px;
+    box-shadow: 10px 5px 10px $color-shadow-gray;
+  }
+  .panel {
+    &__btn {
+      display: flex;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100px;
+      height: 100px;
+
+      font-size: 54px;
+      text-align: center;
+      color: $color-white;
+
+      background-color: $color-btn-pink;
+      border-radius: 50%;
+      box-shadow: 10px 5px 10px $color-shadow-gray;
+
+      transition: all 0.1s ease-in-out;
+
+      &:hover,
+      &:active {
+        background-color: darken($color-btn-pink, 20%);
+      }
+    }
+
+    &__btn-text {
+      text-shadow: $color-shadow-gray 0 0 5px;
+    }
+  }
+}
